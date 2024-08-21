@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <title>index</title>
-    <script type="module" crossorigin src="/Vivre_contentSub/assets/main-e80b6fe6.js"></script>
-    <link rel="stylesheet" href="/Vivre_contentSub/assets/main-a6200f3f.css">
+    <title>Vivre</title>
+    <script type="module" crossorigin src="/Vivre_contentSub/assets/main-a4031d27.js"></script>
+    <link rel="stylesheet" href="/Vivre_contentSub/assets/main-5248674f.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg py-0">
@@ -24,12 +24,14 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="d-flex me-auto" role="search">
-          <input class="form-control me-2" type="search" placeholder="搜尋文章" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">搜尋</button>
+      <div class="collapse navbar-collapse py-5" id="navbarSupportedContent">
+        <form class="d-flex me-auto position-relative" role="search">
+          <input class="form-control pe-5" type="search" placeholder="搜尋文章" aria-label="Search">
+          <button class="btn position-absolute end-0 top-50 translate-middle-y" type="submit">
+            <i class="bi bi-search text-secondary-200"></i>
+          </button>
         </form>
-        <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
+        <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center gap-4">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">所有文章</a>
           </li>
@@ -40,7 +42,7 @@
             <a class="nav-link" href="about.html">關於我們</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-secondary-200" href="login_signup.html" role="button">登入 / 註冊</a>
+            <a class="btn btn-secondary-200 w-100" href="login_signup.html" role="button">登入 / 註冊</a>
           </li>
         </ul>
       </div>
@@ -141,10 +143,11 @@
         </div>
       </section>
       <section class="container py-lg-10 py-8">
-        <div class="row row-cols-lg-3 row-cols-1">
-          <div class="d-flex flex-column justify-content-between">
+        <div class="row">
+          <!-- 左邊導航區域 -->
+          <div class="col-lg-4 d-flex flex-column justify-content-between">
             <h2 class="fs-lg-2 fs-4 mb-5">精選文章</h2>
-            <div>
+            <div class="d-none d-lg-block">
               <span class="d-block">1 / 5</span>
               <div class="d-flex gap-2">
                 <button class="btn btn-outline-gray-300">
@@ -155,26 +158,54 @@
                   <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
-              </div> 
-          </div>
-          <div class="card article-card">
-            <img src="/Vivre_contentSub/assets/articles-1-ebc46e31.png" class="card-img-top" alt="artical-1">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
-          <div class="card article-card">
-            <img src="/Vivre_contentSub/assets/articles-2-05d8b79f.png" class="card-img-top" alt="artical-2">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+      
+          <!-- 右邊卡片區域 -->
+          <div class="col-lg-8">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card article-card">
+                    <img src="/Vivre_contentSub/assets/articles-1-ebc46e31.png" class="card-img-top" alt="article-1">
+                    <div class="card-body">
+                      <h5 class="card-title">私人島嶼的露營奇遇記</h5>
+                      <p class="card-text">遠離塵囂,用全新的眼光重塑生活的舒適本味。徜徉在環山綠野間,在這處隱世私家別墅裡,盡情領略池畔優閒時光,任林間微風撫面,聆聽花鳥嘶啞之音,重拾內心深處的寧靜安詳...</p>
+                      <a href="#" class="text-secondary-200 fs-4">Read More</a>
+                      <hr/>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card article-card">
+                    <img src="/Vivre_contentSub/assets/articles-2-05d8b79f.png" class="card-img-top" alt="article-2">
+                    <div class="card-body">
+                      <h5 class="card-title">窺探米其林三星主廚的絕密手藝</h5>
+                      <p class="card-text">在這間隱世餐廳,來一場味蕾與靈魂的盛宴。幽微燈火下,透過巨匠大師的獨門料理,領略食材中蘊藏的大自然馨香脈絡。營造只屬於你我的私密小宇宙,沉浸其中,品嘗人生至臻至美的風味...</p>
+                      <a href="#" class="text-secondary-200 fs-4">Read More</a>
+                      <hr/>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <!-- 手機版的導航 -->
+        <div class="d-flex justify-content-between d-lg-none mt-3">
+          <span>1 / 5</span>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-gray-300">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+            <hr class="article-line">
+            <button class="btn btn-outline-gray-300">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
       </section>
+      
 
       <section class="bg-primary-200">
         <div class="container position-relative py-lg-10 py-8">
@@ -203,23 +234,23 @@
 
       <section class="container py-lg-10 py-8">
         <h2 class="fs-lg-2 fs-4 mb-5">大家都在看</h2>
-        <div class="d-flex">
-          <ul class="row row-col-3 list-group">
+        <div class="d-none d-lg-flex">
+          <ul class="row row-col-3 list-group p-4">
             <li class="list-group-item active"> • 酒精路跑地圖</li>
             <li class="list-group-item"> • 台北拉麵圖鑑</li>
             <li class="list-group-item"> • 海島自由行</li>
             <li class="list-group-item"> • 短天數出國推薦</li>
             <li class="list-group-item"> • 週末露營趣 </li>
           </ul>
-        <div class="card recommend-card">
+        <div class="card recommend-card p-6">
             <div class="card-body">
-              <h5 class="card-title">酒精路跑地圖</h5>
+              <h5 class="card-title text-secondary-200">酒精路跑地圖</h5>
               <p class="card-text">｜城市酒吧人氣榜,盤點當紅熱門酒吧</p>
               <p class="card-text">｜你要的調酒師在這裡！五月全台酒吧客座活動整理</p>
               <p class="card-text">｜台南老宅手工酒藏,尋味百年人文釀意</p>
             </div>
             <div class="container">
-              <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 gy-5">
+              <div class="row row-cols-lg-4 row-cols-1 gy-5">
                 <div class="d-flex">
                   <img src="/Vivre_contentSub/assets/hots-1-4140643e.png" class="rounded-start" alt="hots-1">
                   <img src="/Vivre_contentSub/assets/hots-2-0511cb4f.png"  alt="hots-2">
@@ -227,16 +258,124 @@
                   <img src="/Vivre_contentSub/assets/hots-4-ec19ac92.png" class="rounded-end" alt="hots-4">
                 </div>
               </div>
-              <div class="d-flex justify-content-between">
-                <div class="text-primary-400">
+              <div class="d-flex justify-content-between my-4">
+                <div class="text-primary-400 d-flex gap-4">
                   <span class="tags">#夜貓行程</span>
                   <span class="tags">#barhopping</span>
                   <span class="tags">#全台酒吧</span>
                 </div>
-                <div><a href="#" class="btn btn-primary">View More <i class="bi bi-arrow-right"></i></a></div>
+                <div><a href="#" class="text-secondary-200 fs-4">View More <i class="bi bi-arrow-right"></i></a></div>
               </div>
             </div>
             </div>
+        </div>
+        <!-- 手機版 -->
+        <div class="d-lg-none">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card recommend-card">
+                  <div class="card-body">
+                    <h5 class="card-title text-secondary-200">酒精路跑地圖</h5>
+                    <p class="card-text">｜城市酒吧人氣榜,盤點當紅熱門酒吧</p>
+                    <p class="card-text">｜你要的調酒師在這裡！五月全台酒...</p>
+                    <p class="card-text">｜台南老宅手工酒藏,尋味百年人文釀意</p>
+                  </div>
+                  <img src="/Vivre_contentSub/assets/hots-1-sm-d41ead80.png" class="card-img-top" alt="article-1">
+                  <div class="d-flex justify-content-between my-4">
+                    <div class="text-primary-400 d-flex gap-4">
+                      <span class="tags">#夜貓行程</span>
+                      <span class="tags">#barhopping</span>
+                      <span class="tags">#全台酒吧</span>
+                    </div>
+                  </div>
+                  <div class="text-center"><a href="#" class="text-secondary-200 fs-4">View More <i class="bi bi-arrow-right"></i></a></div>
+                  
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card recommend-card">
+                  <div class="card-body">
+                    <h5 class="card-title text-secondary-200">台北拉麵圖鑑</h5>
+                    <p class="card-text">｜城市酒吧人氣榜,盤點當紅熱門酒吧</p>
+                    <p class="card-text">｜你要的調酒師在這裡！五月全台酒...</p>
+                    <p class="card-text">｜台南老宅手工酒藏,尋味百年人文釀意</p>
+                  </div>
+                  <img src="/Vivre_contentSub/assets/hots-3-sm-5ceb5458.png" class="card-img-top" alt="article-1">
+                  <div class="d-flex justify-content-between my-4">
+                    <div class="text-primary-400 d-flex gap-4">
+                      <span class="tags">#雞白湯</span>
+                      <span class="tags">#拉麵</span>
+                      <span class="tags">#台北美食</span>
+                    </div>
+                  </div>
+                  <div class="text-center"><a href="#" class="text-secondary-200 fs-4">View More <i class="bi bi-arrow-right"></i></a></div>
+                  
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card recommend-card">
+                  <div class="card-body">
+                    <h5 class="card-title text-secondary-200">海島自由行</h5>
+                    <p class="card-text">｜私島慢活島嶼生活 - 在熱帶天堂品...</p>
+                    <p class="card-text">｜海島漂流記 - 在陽光、沙灘和比基...</p>
+                    <p class="card-text">｜島嶼蹤跡 - 揭開加勒比海上世外桃...</p>
+                  </div>
+                  <img src="/Vivre_contentSub/assets/hots-4-sm-9226d072.png" class="card-img-top" alt="article-1">
+                  <div class="d-flex justify-content-between my-4">
+                    <div class="text-primary-400 d-flex gap-4">
+                      <span class="tags">#熱帶國家</span>
+                      <span class="tags">#海邊</span>
+                      <span class="tags">#無敵海景</span>
+                    </div>
+                  </div>
+                  <div class="text-center"><a href="#" class="text-secondary-200 fs-4">View More <i class="bi bi-arrow-right"></i></a></div>
+                  
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card recommend-card">
+                  <div class="card-body">
+                    <h5 class="card-title text-secondary-200">短天數出國推薦</h5>
+                    <p class="card-text">｜72小時東京遊走 - 當個時尚東京通</p>
+                    <p class="card-text">｜48小時曼谷遊玩全攻略 </p>
+                    <p class="card-text">｜三天兩夜賞櫻微醺東京</p>
+                  </div>
+                  <img src="/Vivre_contentSub/assets/hots-5-sm-42a757ac.png" class="card-img-top" alt="article-1">
+                  <div class="d-flex justify-content-between my-4">
+                    <div class="text-primary-400 d-flex gap-4">
+                      <span class="tags">#說走就走</span>
+                      <span class="tags">#出國玩</span>
+                      <span class="tags">#東亞</span>
+                    </div>
+                  </div>
+                  <div class="text-center"><a href="#" class="text-secondary-200 fs-4">View More <i class="bi bi-arrow-right"></i></a></div>
+                  
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card recommend-card">
+                  <div class="card-body">
+                    <h5 class="card-title text-secondary-200">週末露營趣</h5>
+                    <p class="card-text">｜週末說走就走露營記</p>
+                    <p class="card-text">｜城市野營日記</p>
+                    <p class="card-text">｜和寵物去露營 - 大自然之旅的雙倍...</p>
+                  </div>
+                  <img src="/Vivre_contentSub/assets/hots-2-sm-e66a826f.png" class="card-img-top" alt="article-1">
+                  <div class="d-flex justify-content-between my-4">
+                    <div class="text-primary-400 d-flex gap-4">
+                      <span class="tags">#戶外</span>
+                      <span class="tags">#露營控</span>
+                      <span class="tags">#凹豆</span>
+                    </div>
+                  </div>
+                  <div class="text-center"><a href="#" class="text-secondary-200 fs-4">View More <i class="bi bi-arrow-right"></i></a></div>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </div>
         </div>
       </div>
       </section>
@@ -245,7 +384,7 @@
       <section class="container py-lg-10 py-8">
         <div class="d-flex justify-content-between">
           <h2 class="fs-lg-2 fs-4 mb-5">品味生活</h2>
-            <div class="d-flex gap-2">
+            <div class="d-none d-lg-flex gap-2">
               <button class="btn btn-outline-gray-300">
                 <i class="bi bi-arrow-left"></i>
               </button>
